@@ -14,7 +14,6 @@ public class TurretBlueprint
     public int upgradeCrystalCost;
 
     public bool isMine = false;
-
     public int GetSellAmount()
     {
         return moneyCost / 2;

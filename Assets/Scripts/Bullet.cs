@@ -72,7 +72,15 @@ public class Bullet : MonoBehaviour
 
         if (e != null)
         {
-            e.TakeDamage(damage);
+            if (explosionRadius > 0f)
+            {
+                e.TakeDamage(damage * PlayerPrefs.GetFloat("CannonMoreDamage"));
+            }
+            else
+            {
+                e.TakeDamage(damage * PlayerPrefs.GetFloat("BallistaMoreDamage"));
+            }
+            
         }
     }
 

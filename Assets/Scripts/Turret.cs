@@ -10,10 +10,13 @@ public class Turret : MonoBehaviour
     [Header("General")]
 
     public float range = 15f;
+    private float rangeModifier = 1;
 
     [Header("Use Bullets (default)")]
+    public bool isBallista = false;
     public GameObject bulletPrefab;
     public float fireRate = 1f;
+    private float fireRateModifier = 1;
     private float fireCountdown = 0f;
 
     [Header("Use Laser")]
@@ -57,7 +60,14 @@ public class Turret : MonoBehaviour
                 nearestEnemy = enemy;
             }
         }
-        if (nearestEnemy != null && shortestDistance <= range)
+        if(isBallista)
+            rangeModifier = PlayerPrefs.GetFloat("BallistaMoreRange");
+        else if (useLaser)
+            rangeModifier = PlayerPrefs.GetFloat("MageMoreRange");
+        else if(!isBallista && !useLaser)
+            rangeModifier = PlayerPrefs.GetFloat("CannonMoreRange");
+
+        if (nearestEnemy != null && shortestDistance <= range * rangeModifier)
         {
             target = nearestEnemy.transform;
             targetEnemy = target.GetComponent<Enemy>();
@@ -95,10 +105,18 @@ public class Turret : MonoBehaviour
         }
         else
         {
+            if (isBallista)
+            {
+                fireRateModifier = PlayerPrefs.GetFloat("BallistaMoreFireRate");
+            }
+            else
+            {
+                fireRateModifier = PlayerPrefs.GetFloat("CannonMoreFireRate");
+            }
             if (fireCountdown <= 0f)
             {
                 Shoot();
-                fireCountdown = 1f / fireRate;
+                fireCountdown = 1f / (fireRate * fireRateModifier);
             }
 
             fireCountdown -= Time.deltaTime;
@@ -115,8 +133,8 @@ public class Turret : MonoBehaviour
 
     void Laser ()
     {
-        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
-        targetEnemy.Slow(slowAmount);
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime * PlayerPrefs.GetFloat("MageMoreDamage"));
+        targetEnemy.Slow(slowAmount * PlayerPrefs.GetFloat("MageMoreSlow"));
 
         if (!lineRenderer.enabled)
         {

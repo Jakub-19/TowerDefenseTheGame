@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
 
     public Transform partToRotate;
     public float turnSpeed = 20f;
+    public bool isBoss = false;
 
     private Enemy enemy;
 
@@ -55,7 +56,14 @@ public class EnemyMovement : MonoBehaviour
 
     void EndPath()
     {
-        PlayerStats.Lives--;
+        if(isBoss)
+        {
+            PlayerStats.Lives -= PlayerStats.Lives;
+        }
+        else
+        {
+            PlayerStats.Lives--;
+        }
         WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }

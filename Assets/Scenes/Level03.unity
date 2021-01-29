@@ -16463,6 +16463,7 @@ MonoBehaviour:
       timeToNextPartWave: 0
   spawnPoint: {fileID: 1102903587}
   timeBetweenWaves: 10
+  countdown: 15
   waveCountdownText: {fileID: 1374409498}
   waveIndexText: {fileID: 2017072181}
   gameManager: {fileID: 1287779611}
@@ -18263,6 +18264,7 @@ MonoBehaviour:
   menuSceneName: MainMenu
   levelSelect: LevelSelect
   levelToUnlock: 3
+  levelNumber: 3
   sceneFader: {fileID: 1009467226}
 --- !u!95 &1446648605
 Animator:

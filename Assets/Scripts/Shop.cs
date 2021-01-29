@@ -8,6 +8,9 @@ public class Shop : MonoBehaviour
     public TurretBlueprint missileLauncher;
     public TurretBlueprint laserBeamer;
     public TurretBlueprint mine;
+
+    public Button magicSpell;
+
     public Text ballistaCostGold;
     public Text ballistaCostCrystal;
     public Text canonCostGold;
@@ -34,6 +37,15 @@ public class Shop : MonoBehaviour
 
         mineCostGold.text = mine.moneyCost.ToString();
         mineCostCrystal.text = mine.crystalCost.ToString();
+
+        if(PlayerPrefs.GetInt("MagicSpell") == 1)
+        {
+            magicSpell.enabled = true;
+        }
+        else
+        {
+            magicSpell.enabled = false;
+        }
     }
 
     public void SelectStandardTurret()

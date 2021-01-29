@@ -620,6 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 15
+  isBallista: 1
   bulletPrefab: {fileID: 7112325981489176018, guid: 6c6cfda96ac10da45858949f80b5ce46,
     type: 3}
   fireRate: 0.9

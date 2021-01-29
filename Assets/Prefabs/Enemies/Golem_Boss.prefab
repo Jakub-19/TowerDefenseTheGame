@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSpeed: 1
+  timer: 2
   speed: 0
   startHealth: 10000
   worth: 300
@@ -353,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partToRotate: {fileID: 5441602034061257088}
   turnSpeed: 20
+  isBoss: 1
 --- !u!135 &6741845689024643252
 SphereCollider:
   m_ObjectHideFlags: 0

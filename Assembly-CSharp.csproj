@@ -77,17 +77,21 @@
      <Compile Include="Assets\Scripts\NodeUI.cs" />
      <Compile Include="Assets\Scripts\Pace.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\PlayerPrefsInitializer.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\RoundsSurvived.cs" />
      <Compile Include="Assets\Scripts\SceneFader.cs" />
      <Compile Include="Assets\Scripts\Shop.cs" />
+     <Compile Include="Assets\Scripts\Spell.cs" />
      <Compile Include="Assets\Scripts\Turret.cs" />
      <Compile Include="Assets\Scripts\TurretBlueprint.cs" />
+     <Compile Include="Assets\Scripts\UpgradeShop.cs" />
      <Compile Include="Assets\Scripts\Wave.cs" />
      <Compile Include="Assets\Scripts\WavePart.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\Waypoints.cs" />
      <None Include="Assets\Turrets\CanonTower\Basic\Shaders\Double Side.shader" />
+     <None Include="Assets\Imports\Procedural fire\Shaders\FireSphere.shader" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

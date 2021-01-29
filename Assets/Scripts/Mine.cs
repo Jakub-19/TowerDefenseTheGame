@@ -7,7 +7,7 @@ public class Mine : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("GetCrystals", 0f, callingRate);
+        InvokeRepeating("GetCrystals", 0f, callingRate * (2- PlayerPrefs.GetFloat("MoreMineSpeed")));
     }
     void GetCrystals()
     {

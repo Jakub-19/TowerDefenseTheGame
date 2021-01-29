@@ -14,6 +14,10 @@ public class MainMenu : MonoBehaviour
     {
         sceneFader.FadeTo(levelToLoad);
     }
+    public void HowToPlay()
+    {
+        sceneFader.FadeTo("HowToPlay");
+    }
     public void Quit()
     {
         Debug.Log("Exiting..");
