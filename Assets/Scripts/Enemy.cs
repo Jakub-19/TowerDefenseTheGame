@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float startSpeed = 10f;
     public float timer = 2f;
+    public bool isBoss = false;
     [HideInInspector]
     public float speed;
     private GameObject spellEffect = null;
@@ -82,6 +83,9 @@ public class Enemy : MonoBehaviour
 
     IEnumerator TakeSpellDamage(float dmg, GameObject effect)
     {
+        if (isBoss)
+            dmg = dmg / 2;
+
         float smoothness = 0.05f;
         for (float i = timer; i > 0; i -= smoothness)
         {

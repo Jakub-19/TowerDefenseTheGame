@@ -18,7 +18,7 @@ public class UpgradeShop : MonoBehaviour
         upgradesAmount = PlayerPrefs.GetInt("UpgradesAmount");
         gold = PlayerPrefs.GetInt("level1Gold") + PlayerPrefs.GetInt("level2Gold") + PlayerPrefs.GetInt("level3Gold") - PlayerPrefs.GetInt("UpgradesAmount");
         goldAmount.text = gold.ToString();
-        gold = 3;
+        
         //PlayerPrefs Names!!!
         //PlayerPrefs.SetInt("MagicSpellBought", 1);
         //PlayerPrefs.SetInt("MoreMineSpeedBought", 1);

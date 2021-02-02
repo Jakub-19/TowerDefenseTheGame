@@ -12,6 +12,9 @@ public class Spell : MonoBehaviour
     public float dmgPercentage = 50;
     private float countdown = 0f;
 
+    public Text Bought;
+    public Text NotBought;
+
     [Header("Unity")]
     public Image countdownProgress;
 
@@ -20,13 +23,23 @@ public class Spell : MonoBehaviour
     {
         Explode();
         countdown = cooldown;
-        SpellItem.enabled = false;
+        SpellItem.interactable = false;
     }
 
     void Start()
     {
-        SpellItem.enabled = false;
+        SpellItem.interactable = false;
         countdown = cooldown;
+        if (PlayerPrefs.GetInt("MagicSpell") == 1)
+        {
+            NotBought.enabled = false;
+            Bought.enabled = true;
+        }
+        else
+        {
+            NotBought.enabled = true;
+            Bought.enabled = false;
+        }
     }
 
     void Update()
@@ -35,7 +48,7 @@ public class Spell : MonoBehaviour
         {
             if (countdown < 0)
             {
-                SpellItem.enabled = true;
+                SpellItem.interactable = true;
             }
             else
             {

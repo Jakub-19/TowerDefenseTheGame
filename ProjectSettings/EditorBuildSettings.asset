@@ -18,11 +18,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Shop.unity
     guid: 20d4efcdc10989a4db9865897a294f2a
   - enabled: 1
+    path: Assets/Scenes/StoryTell1.unity
+    guid: 5b11d3e206d1fd04f85e26d4965b2885
+  - enabled: 1
     path: Assets/Scenes/Level01.unity
     guid: 5b3bb7bf571c3d84d8e28e3e5cddeffa
   - enabled: 1
+    path: Assets/Scenes/StoryTell2.unity
+    guid: 8d4dc3bc13d1eb945884014e235592af
+  - enabled: 1
     path: Assets/Scenes/Level02.unity
     guid: 614791a603fe73145bafe7c340a124b9
+  - enabled: 1
+    path: Assets/Scenes/StoryTell3.unity
+    guid: c1999b993d21e4342a5dda74710e48b7
   - enabled: 1
     path: Assets/Scenes/Level03.unity
     guid: 635b2363d6b9f2c46a1ab75499f4eb89
